@@ -1,5 +1,7 @@
 .vehicles-container {
   display: flex;
+  justify-content: space-between;
+  width: 80%;
 }
 
 .vehicles-container ul {
@@ -8,6 +10,13 @@
 
 .vehicles-container h5 {
   text-align: center;
+}
+
+.edit-button {
+  background: #000;
+  color: #fff;
+  padding: 3px;
+  display: block;
 }
 
 .vehicle-info > ul > li {
