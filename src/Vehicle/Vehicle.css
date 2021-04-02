@@ -1,0 +1,23 @@
+.vehicles-container {
+  display: flex;
+}
+
+.vehicles-container ul {
+  list-style: none;
+}
+
+.vehicles-container h5 {
+  text-align: center;
+}
+
+.vehicle-info > ul > li {
+  padding-bottom: 10px;
+}
+
+.vehicle-status > ul > li {
+  padding-bottom: 10px;
+}
+
+.lock-status > ul > li {
+  padding-bottom: 10px;
+}

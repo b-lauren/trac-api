@@ -1,5 +1,6 @@
 import React from "react";
 import "./Dashboard.css";
+import Vehicle from "../Vehicle/Vehicle";
 
 const Dashboard = () => {
   return (
@@ -23,7 +24,9 @@ const Dashboard = () => {
           <h5>Vehicle Search</h5>
         </div>
       </div>
-      <div className="panel-vehicles"></div>
+      <div className="panel-vehicles">
+        <Vehicle />
+      </div>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./Vehicle.css";
 
 //http://console-api.tracmobility.com/test/vehicles?page=0&size=10
 
@@ -11,37 +12,40 @@ const Vehicle = () => {
         "http://console-api.tracmobility.com/test/vehicles?page=0&size=10"
       );
       const jsonResponse = await response.json();
-      console.log(jsonResponse);
-      setApi(jsonResponse);
+      console.log(jsonResponse.content);
+      setApi(jsonResponse.content);
     };
     getVehicles();
   }, []);
 
   return (
-    <div>
-      <h1>Vehicles</h1>
-      <ul>
-        {jsonResponse.content.map((response, index) => {
-          return <p>{response[index]}</p>;
-        })}
-      </ul>
+    <div className="vehicles-container">
+      <div className="vehicle-info">
+        <h5>Vehicles</h5>
+        <ul>
+          {api.map((response, index) => {
+            return <li>{response.createdAt.toString()}</li>;
+          })}
+        </ul>
+      </div>
+      <div className="vehicle-status">
+        <h5>Status</h5>
+        <ul>
+          {api.map((response, index) => {
+            return <li>{response.status}</li>;
+          })}
+        </ul>
+      </div>
+      <div className="lock-status">
+        <h5>Lock Status</h5>
+        <ul>
+          {api.map((response, index) => {
+            return <li>{response.lockStatus}</li>;
+          })}
+        </ul>
+      </div>
     </div>
   );
 };
-
-//   const Comment = ({ jsonResponse }) => {
-//     return (
-//       <ul>
-//         {jsonResponse.map((data) => {
-//           return (
-//             <li>
-//               <p{data.content}</p>
-//             </li>
-//           );
-//         })}
-//       </ul>
-//     );
-//   };
-// };
 
 export default Vehicle;
