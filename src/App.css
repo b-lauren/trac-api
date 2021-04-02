@@ -1,3 +1,9 @@
+html,
+body {
+  /* overflow: hidden; */
+  box-sizing: border-box;
+}
+
 .App {
   background: #f5f5f5;
   margin-top: 0;
