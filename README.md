@@ -1,1 +1,1 @@
-![Alt text](./public/trac-dashboard.png?raw=true "Dashboard")
+![Alt text](./public/trac-dashboard2.png?raw=true "Dashboard")
