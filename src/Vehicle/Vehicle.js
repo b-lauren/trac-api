@@ -21,9 +21,9 @@ const Vehicle = () => {
     <div>
       <h1>Vehicles</h1>
       <ul>
-        {/* {jsonResponse.map((response) => {
-          return <li>{response.content}</li>;
-        })} */}
+        {jsonResponse.content.map((response, index) => {
+          return <p>{response[index]}</p>;
+        })}
       </ul>
     </div>
   );

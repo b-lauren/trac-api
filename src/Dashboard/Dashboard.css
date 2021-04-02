@@ -20,6 +20,11 @@
   align-items: left;
   justify-content: space-between;
 }
+
+.panel-menu li:nth-child(1) {
+  border-bottom: 1px solid #a9a9a9;
+  padding-bottom: 5px;
+}
 .panel-vehicles {
   grid-column: span 2;
   background: #fff;
@@ -31,6 +36,7 @@
   padding: 10px;
   border-radius: 4px;
   text-align: center;
+  font-weight: bold;
 }
 
 .panel-map,
@@ -52,4 +58,9 @@
   margin-top: 25px;
   border-radius: 10px;
   font-size: 20px;
+}
+
+.panel-vehicles {
+  background: #f0eded;
+  border-radius: 10px;
 }
